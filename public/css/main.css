@@ -1,0 +1,138 @@
+body {
+        color: #383838;
+}
+
+nav.main-nav a {
+        color: #99CC00;
+}
+nav.main-nav a.cta {
+        background: #99CC00;
+}
+
+#title:hover {
+        color: #99CC00;
+}
+
+a,
+#title,
+#post-list a:hover,
+#post-list li:hover .dates,
+#title:hover {
+        color: #99CC00;
+}
+
+p a { color: #99CC00; }
+
+b, strong { font-weight: 600; }
+
+.post h1 {
+         margin: 40px 0 20px 0;
+}
+
+.post h2 {
+         margin-bottom: 10px;
+}
+
+#archive-link:hover {
+        background: #99CC00;
+        box-shadow: 0 0 0 1px #99CC00;
+}
+
+#archive-list li a:hover,#archive-list li:hover .dates {
+        color: #99CC00;
+}
+
+#post-list.archive.readmore a{
+        color: #99CC00;
+}
+
+section#post-body {
+    font-family: "MJX_Main",Georgia,Times,"Times New Roman",serif;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 1.15em;
+    }
+}
+
+mark {
+    background-color: #fcffcb !important;
+    color: inherit;
+}
+
+.post a:hover, .post a:active, .post a:focus {
+    text-decoration: underline !important;
+}
+
+#wrapper {
+    max-width: 800px;
+}
+
+.axiom {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.axiom:before {
+    content: "Axiom.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.theorem:before {
+    content: "Theorem.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lemma {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.lemma:before {
+    content: "Lemma.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof:before {
+    content: "Proof.";
+    font-style: italic;
+}
+.proof:after {
+    content: "\25FC";
+    float:right;
+}
+
+.definition {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.definition:before {
+    content: "Definition.";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.example {
+    display: block;
+    font-style: normal;
+}
+.example:before {
+    content: "Example: ";
+    font-weight: normal;
+    font-style: italic;
+}

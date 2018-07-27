@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Units on g7s personal website</title>
+    <link>https://g7s.io/tags/units/</link>
+    <description>Recent content in Units on g7s personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Jul 2018 10:30:29 +0300</lastBuildDate>
+    
+	<atom:link href="https://g7s.io/tags/units/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Units and measurements</title>
+      <link>https://g7s.io/post/units/</link>
+      <pubDate>Fri, 27 Jul 2018 10:30:29 +0300</pubDate>
+      
+      <guid>https://g7s.io/post/units/</guid>
+      <description>Introduction Properties For a system one can define properties that describe the system in some sense. For example consider the system of the display you are reading this on. This system has many qualitative characteristics such as how large it is, how luminous it is, how often it refreshes the displayed image etc. Some of these system properties are also measurable:
+A system property is measurable if by using a reproducible process, one can associate it with a real number.</description>
+    </item>
+    
+  </channel>
+</rss>

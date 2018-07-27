@@ -1,0 +1,8 @@
+# Hugo default output directory
+coach/public
+
+# OSX
+.DS_Store
+
+# Firebase
+.firebaserc

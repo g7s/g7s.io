@@ -1,0 +1,20 @@
+<div class="profile">
+    <section id="wrapper">
+        <header id="header">
+            <a href="{{ "about" | absURL }}">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="2.046cm" height="2.117cm">
+                    <text font-family="Fira Code"
+                          fill="rgb(153, 204, 0)"
+                          font-size="60px"
+                          x="0px"
+                          y="52.266px">&#40;&#41;</text>
+                </svg>
+            </a>
+            <h1>{{ .Site.Params.name }}</h1>
+            <h2>{{ .Site.Params.bio | markdownify }}</h2>
+        </header>
+    </section>
+</div>
