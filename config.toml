@@ -37,7 +37,7 @@ disqusShortname = "g7s"
         readMore = ""
         copyright = ""
         # Sharing options and author information in posts
-        aboutAuthor = "I'm an blogger."
+        aboutAuthor = "(do (hacker) (powerlifter) (father))"
         tweet = ""
         share = ""
         # 404 page

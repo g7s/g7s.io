@@ -273,7 +273,7 @@ derived unit) a conversion function from $\textbf{u}$ to $\textbf{v}$ should be 
 <div>
 \begin{align*}
     u_{\textbf{v}}(x) &= c x + d \tag{d.3} \label{conversion.fun.gen} \\
-    u^{-1}_{\textbf{v}}(y) \equiv v_{\textbf{u}}(y) &= \frac{1}{c} y - d
+    u^{-1}_{\textbf{v}}(y) \equiv v_{\textbf{u}}(y) &= \frac{1}{c} y - \frac{d}{c}
 \end{align*}
 </div>
 
@@ -377,7 +377,7 @@ The **prefix** $p$ of a unit $\textbf{a}$ is a new unit $\textbf{c}$:
 p\textbf{a} \equiv \textbf{c} \overset{\underset{\mathrm{def}}{}}{=}
 \left( \vec{d}_{\textbf{c}}, c_{\textbf{v}} \right) =
 \left(\vec{d}_{\textbf{a}},
-|p| a_{\textbf{v}} \right)
+ c_{\textbf{v}}(x) = |p|cx + d \right)
 \tag{d.9} \label{prefix.def}
 \end{equation}
 </div>
@@ -399,7 +399,7 @@ function $\ref{conversion.fun.gen}$
    (make-unit dimension slope 0))
   ([dimension slope y-intercept]
    ^{:type ::unit}
-   (vector dimension slope y-intercept)))
+   [dimension slope y-intercept]))
 ```
 
 Next we define the selectors `dimensions`, `slope`, `y-intercept` and the `conv-fn`, `inv-conv-fn`
@@ -427,7 +427,7 @@ which are the conversion function for a unit and its inverse (see $\ref{conversi
 (defn inv-conv-fn
   "The inverse conversion function of a unit."
   [unit]
-  (fn [x] (- (/ x (slope unit)) (y-intercept unit))))
+  (fn [x] (/ (- x (y-intercept unit)) (slope unit))))
 ```
 
 It is trivial now to implement the operations
@@ -462,7 +462,7 @@ and $\ref{prefix.def}$
 (defn prefix
   "The prefix operation."
   [u p]
-  (make-unit (dimensions u) (* (slope u) p) (* (y-intercept u) p)))
+  (make-unit (dimensions u) (* (slope u) p) (y-intercept u)))
 ```
 
 In order to be able to convert a magnitude from one unit to another we need a predicate function
@@ -536,7 +536,7 @@ convert the magnitude from the unit to the corresponding SI unit.
 (def day (make-unit [0 0 1 0 0 0 0] 86400))
 (def kelvin (make-unit [0 0 0 1 0 0 0] 1))
 (def celsius (make-unit [0 0 0 1 0 0 0] 1 273.15))
-(def fahrenheit (make-unit [0 0 0 1 0 0 0] 5/9 459.67))
+(def fahrenheit (make-unit [0 0 0 1 0 0 0] 5/9 (* 5/9 459.67)))
 (def joule (make-unit [2 1 -2 0 0 0 0] 1))
 (def calorie (make-unit [2 1 -2 0 0 0 0] 4.184))
 (def newton (make-unit [1 1 -2 0 0 0 0] 1))
